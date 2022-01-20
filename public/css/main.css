@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
 
 :root {
   --background-color: hsl(0, 0%, 93%);
@@ -6,7 +6,7 @@
   --accent: hsl(39, 99%, 61%);
   --accent-bg: hsl(196, 33%, 87%);
   --focus: hsl(216, 94%, 58%);
-  --font: 1.2rem/1.53 "IBM Plex Serif", "sans-serif", serif;
+  --font: 1.2rem/1.53 "IBM Plex Sans", "sans-serif", serif;
   --transition: 0.5s all ease;
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body:not(.aquapole__logo) {
   margin: 0;
   font: var(--font);
   font-feature-settings: "case", "calt", "tnum", "ss01", "zero";
@@ -203,20 +203,25 @@ a:active {
 
 /* homepage classes
      ========================================================================== */
-
-.intro__title {
-  display: flex;
+.aquapole__container {
+  align-items: center;
   justify-content: center;
-  color: var(--accent);
-  font-size: 2.25rem;
 }
 
-.intro__title>span {
-  font-size: 0.6em;
-  display: flex;
-  align-self: center;
-  padding-left: 0.25em;
-  padding-top: 0.25em;
+.aquapole__logo {
+  width: 8em;
+}
+
+.aquapole__name__container {
+  padding-left: 2.5em;
+}
+
+.aquapole__name {
+  font-size: 3.25rem;
+}
+
+.aquapole__slogan {
+  font-weight: 100;
 }
 
 /* contact classes
@@ -269,7 +274,7 @@ a:active {
 
 @media screen and (min-width: 450px) {
   :root {
-    --font: 1.6rem/1.63 "IBM Plex Serif", "sans-serif", serif;
+    --font: 1.6rem/1.63 "IBM Plex Sans", "sans-serif", serif;
   }
 
   h1 {
