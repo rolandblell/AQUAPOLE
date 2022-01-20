@@ -64,11 +64,6 @@
         </p>
       </div>
     </section>
-    <div class="scroll__to__bottom">
-      <span class="bounce text-decoration-none cursor-pointer">
-        <i class="icon-chevron-down"></i>
-      </span>
-    </div>
   </main>
   <div class="parallax-placeholder"></div>
   <div class="footer-container">
@@ -76,22 +71,7 @@
   </div>
   <!-- Scripts -->
   <script type="module" src="js/main.js"></script>
-  <script>
-    const scrollToBottom = document.querySelectorAll(".scroll__to__bottom");
-
-    scrollToBottom.forEach((element) => {
-      element.addEventListener("click", () => {
-        let counter = 0;
-        const interval = setInterval(function () {
-          if (counter > 3) {
-            clearInterval(interval);
-          }
-          window.scrollTo(0, document.body.scrollHeight);
-          counter++;
-        });
-      });
-    });
-  </script>
+  
 </body>
 
 </html>

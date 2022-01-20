@@ -183,24 +183,6 @@ a:active {
   cursor: pointer;
 }
 
-.scroll__to__bottom {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1.5em;
-}
-
-.scroll__to__bottom a:focus {
-  outline: unset;
-}
-
-.bounce {
-  animation: bounce 2s infinite;
-}
-
-.bounce:hover {
-  animation: unset;
-}
-
 /* homepage classes
      ========================================================================== */
 .aquapole__container {
@@ -331,24 +313,5 @@ main {
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes bounce {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-8px);
-  }
-
-  60% {
-    transform: translateY(-4px);
   }
 }
