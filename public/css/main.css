@@ -198,10 +198,6 @@ a:active {
   padding-left: 2.5em;
 }
 
-.aquapole__name {
-  font-size: 3.25rem;
-}
-
 .aquapole__slogan {
   font-weight: 100;
 }
@@ -261,6 +257,10 @@ a:active {
 
   h1 {
     font-size: 2.45rem;
+  }
+
+  .aquapole__name {
+    font-size: 3.25rem;
   }
 
   .intro__description {
