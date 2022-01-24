@@ -10,7 +10,8 @@ class Footer extends HTMLElement {
             <h2 class="contact__heading">Let's Get in Touch</h2>
             <div>
               <p>If you’d like to find out how AQUAPOLE Cleaning Services can meet your needs then feel
-              free to get in touch today <a href="mailto:admin@aquapole.net">admin@aquapole.net</a>.</p>
+              free to email us<a href="mailto:admin@aquapole.net">admin@aquapole.net</a>
+              or call us on this number <a href="tel:+4407366366376">07 366 366 376</a>.</p>
               <div class="contact__social">
                 <a class="instagram__icon" rel="noopener" href="https://www.instagram.com/aquapolecleaningservices/" target="_blank">
                 Instagram<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
