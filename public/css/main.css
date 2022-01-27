@@ -202,6 +202,38 @@ a:active {
   font-weight: 100;
 }
 
+/* services */
+
+main section svg {
+  width: 100px;
+}
+
+main .wrapper:last-child {
+  padding-bottom: 6em;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card>h1 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  padding-bottom: 1em;
+}
+
+.cards {
+  grid-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 3em 0;
+}
+
 /* contact classes
      ========================================================================== */
 
@@ -215,6 +247,10 @@ a:active {
   display: grid;
   place-content: center;
   padding: 0.75em 0.75em 2em 0.75em;
+}
+
+.padding__inner.headline {
+  padding: 0.75em;
 }
 
 .contact__social {
@@ -272,6 +308,10 @@ a:active {
   }
 
   .padding__inner {
+    padding: 0
+  }
+
+  footer .padding__inner {
     padding: 4em 0.75em;
   }
 
