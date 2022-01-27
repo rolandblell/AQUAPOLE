@@ -143,6 +143,10 @@ a:active {
   display: flex !important;
 }
 
+.d-grid {
+  display: grid !important;
+}
+
 .d-inline-flex {
   display: inline-flex !important;
 }
@@ -204,8 +208,12 @@ a:active {
 
 /* services */
 
-main section svg {
+main section svg:not(.fa-plus, .fa-heat) {
   width: 100px;
+}
+
+main section svg:is(.fa-plus, .fa-heat) {
+  width: 1em;
 }
 
 main .wrapper:last-child {
@@ -234,6 +242,16 @@ main .wrapper:last-child {
   padding: 3em 0;
 }
 
+.card__footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__footer__container > img {
+  width: 5em;
+}
+
 /* contact classes
      ========================================================================== */
 
@@ -251,6 +269,10 @@ main .wrapper:last-child {
 
 .padding__inner.headline {
   padding: 0.75em;
+}
+
+.padding__inner.hero {
+  padding-top: 0.75em;
 }
 
 .contact__social {
