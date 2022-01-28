@@ -265,6 +265,10 @@ main .wrapper:last-child {
   margin-right: auto;
 }
 
+.headline {
+  text-align: center;
+}
+
 .padding__inner {
   display: grid;
   place-content: center;
@@ -326,7 +330,8 @@ main .wrapper:last-child {
   }
 
   .intro__description {
-    margin: 2em 0;
+    margin: 4em 0;
+    text-align: center;
   }
 
   .wrapper {
@@ -338,7 +343,7 @@ main .wrapper:last-child {
   }
 
   footer .padding__inner {
-    padding: 4em 0.75em;
+    padding: 4em 1.75em;
   }
 
   .wrapper {
