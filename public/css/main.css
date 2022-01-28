@@ -254,12 +254,6 @@ main .wrapper:last-child {
   padding: 3em 0;
 }
 
-.areas-covered > div {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 2.5em;
-}
-
 .card__footer__container {
   display: flex;
   justify-content: space-between;
@@ -267,9 +261,37 @@ main .wrapper:last-child {
   width: 100%;
 }
 
-.card__footer__container > img {
+.card__footer__container>img {
   width: 10em;
   height: 7em;
+}
+
+dialog {
+  border: initial;
+  border-radius: 12px;
+}
+
+button.close {
+  background: initial;
+  border: initial;
+  cursor: pointer;
+}
+
+.close .fa-plus {
+  transform: rotate(45deg);
+  width: 2.8em;
+  height: 2.8em;
+  opacity: 0.2;
+}
+
+.close .fa-plus:hover {
+  opacity: 0.8;
+}
+
+.areas-covered>div {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2.5em;
 }
 
 /* contact classes
