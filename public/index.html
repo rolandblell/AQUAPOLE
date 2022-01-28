@@ -57,18 +57,6 @@
 
         <p>We are fully insured with comprehensive liability coverage to give you peace of mind.</p>
 
-        <h1>Why AQUAPOLE</h1>
-
-        <p>AQUAPOLE uses “water fed” poles for most cleaning, safely from the ground. This process uses 100% pure water,
-          free from undissolved minerals and chemicals, both guaranteeing a long lasting and streak free window cleaning
-          every time.
-          The benefits of using the water fed pole system is not only just safety to our staff but is also kind to the
-          environment, and the soft bristled brushes and pure water are gentle and safe for your windows, PVC or metal
-          framed. The brushes can clean all parts of the glass and frames leaving you with SIMPLY SPOTLESS windows.</p>
-
-        <p>Our poles extend up to 55 feet which is sufficient to reach the highest buildings in the area. In certain
-          circumstances we use cherry picking equipment which enables us to provide complete satisfaction.</p>
-
       </div>
     </section>
 
@@ -77,7 +65,7 @@
     </section>
 
     <section class="wrapper cards services">
-      <div class="card">
+      <button type="button" id="show-dialog-modal-gutter-cleaning" class="card">
         <h1>Gutter Cleaning</h1>
         <div class="card__footer__container">
           <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus"
@@ -87,14 +75,10 @@
             </path>
           </svg>
           <img src="images/icons/gutter.png" alt="AQUAPOLE GUTTER CLEANING - SUSSEX AND KENT">
-          <!-- <p>Blocked gutters and downpipes can cause rain water to overflow down walls and cause dampness. AQUAPOLE uses a
-          high-power vacuum gutter clearing machine that can reach up to 10 meter hose and an 80 litre capacity to
-          insure
-          no debris is left in your gutters.</p> -->
         </div>
-      </div>
+      </button>
 
-      <div class="card">
+      <button type="button" id="show-dialog-modal-residential" class="card">
         <h1>Residential Window Cleaning</h1>
         <div class="card__footer__container">
           <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus"
@@ -115,9 +99,9 @@
             </g>
           </svg>
         </div>
-      </div>
+      </button>
 
-      <div class="card">
+      <button type="button" id="show-dialog-modal-commercial" class="card">
         <h1>Commercial Window Cleaning</h1>
         <div class="card__footer__container">
           <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus"
@@ -139,9 +123,9 @@
             </g>
           </svg>
         </div>
-      </div>
+      </button>
 
-      <div class="card">
+      <button type="button" id="show-dialog-modal-hot-water" class="card">
         <h1>Hot Water Benefits</h1>
         <div class="card__footer__container">
           <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus"
@@ -172,12 +156,9 @@
             </svg>
           </div>
         </div>
-        <!-- <p>AQUAPOLE offers the option of the hot water pole fed system. Hot water is extremely effective as it softens
-          and absorbs dirt, therefore no sticky residue is left on the glass. It is also very effective on frames,
-          cladding, conservatories, gutters and fascias and windows dry faster and stay cleaner for much longer.</p> -->
-      </div>
+      </button>
 
-      <div class="card">
+      <button type="button" id="show-dialog-modal-insurance" class="card">
         <h1>Public Liability Insurance</h1>
         <div class="card__footer__container">
           <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus"
@@ -199,9 +180,7 @@
             </g>
           </svg>
         </div>
-
-        <!-- <p>Insurance related content</p> -->
-      </div>
+      </button>
     </section>
 
     <section class="wrapper padding__inner headline">
@@ -227,6 +206,113 @@
         <p>For industrial and commercial properties, extended area coverage upon request.</p>
       </div>
     </section>
+    <!-- Modal -->
+    <dialog id="dialog-modal-gutter-cleaning">
+      <div class="absolute right-0 top-0">
+        <button type="button" class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-inner">
+        <h1>Gutter Cleaning</h1>
+        <p>
+          Blocked gutters and downpipes can cause rain water to overflow down walls and cause dampness. AQUAPOLE uses a
+          high-power vacuum gutter clearing machine that can reach up to 10 meter hose and an 80 litre capacity to
+          insure
+          no debris is left in your gutters.
+        </p>
+      </div>
+    </dialog>
+    <dialog id="dialog-modal-residential">
+      <div class="absolute right-0 top-0">
+        <button type="button" class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-inner">
+        <h1>Residential Window Cleaning</h1>
+        <p>
+          AQUAPOLE uses “water fed” poles for most cleaning, safely from the ground. This process uses 100% pure water,
+          free from undissolved minerals and chemicals, both guaranteeing a long lasting and streak free window cleaning
+          every time. The benefits of using the water fed pole system is not only just safety to our staff but is also
+          kind to the environment, and the soft bristled brushes and pure water are gentle and safe for your windows,
+          PVC or metal framed. The brushes can clean all parts of the glass and frames leaving you with SIMPLY SPOTLESS
+          windows.
+
+          Our poles extend up to 16 meters which is sufficient to reach the highest buildings in the area. In certain
+          circumstances we use cherry picking equipment which enables us to provide complete satisfaction.
+        </p>
+      </div>
+    </dialog>
+    <dialog id="dialog-modal-commercial">
+      <div class="absolute right-0 top-0">
+        <button type="button" class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-inner">
+        <h1>Commercial Window Cleaning</h1>
+        <p>
+          AQUAPOLE uses “water fed” poles for most cleaning, safely from the ground. This process uses 100% pure water,
+          free from undissolved minerals and chemicals, both guaranteeing a long lasting and streak free window cleaning
+          every time. The benefits of using the water fed pole system is not only just safety to our staff but is also
+          kind to the environment, and the soft bristled brushes and pure water are gentle and safe for your windows,
+          PVC or metal framed. The brushes can clean all parts of the glass and frames leaving you with SIMPLY SPOTLESS
+          windows.
+
+          Our poles extend up to 16 meters which is sufficient to reach the highest buildings in the area. In certain
+          circumstances we use cherry picking equipment which enables us to provide complete satisfaction.
+        </p>
+      </div>
+    </dialog>
+    <dialog id="dialog-modal-hot-water">
+      <div class="absolute right-0 top-0">
+        <button type="button" class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-inner">
+        <h1>Hot Water</h1>
+        <p>
+          AQUAPOLE offers the option of the hot water pole fed system. Hot water is extremely effective as it softens
+          and absorbs dirt, therefore no sticky residue is left on the glass. It is also very effective on frames,
+          cladding, conservatories, gutters and fascias and windows dry faster and stay cleaner for much longer.
+        </p>
+      </div>
+    </dialog>
+    <dialog id="dialog-modal-insurance">
+      <div class="absolute right-0 top-0">
+        <button type="button" class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-inner">
+        <h1>Insurance</h1>
+        <p>
+          We are fully insured with comprehensive liability coverage to give you peace of mind.
+        </p>
+      </div>
+    </dialog>
   </main>
   <div class="parallax-placeholder"></div>
   <div class="footer-container">

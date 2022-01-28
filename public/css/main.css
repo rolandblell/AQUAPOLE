@@ -213,7 +213,7 @@ main section svg:not(.fa-plus, .fa-heat) {
 }
 
 main section svg:is(.fa-plus, .fa-heat) {
-  width: 1em;
+  width: 2em;
 }
 
 main .wrapper:last-child {
@@ -226,6 +226,9 @@ main .wrapper:last-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: unset;
+  cursor: pointer;
+  text-align: initial;
 }
 
 .card>h1 {
@@ -246,10 +249,11 @@ main .wrapper:last-child {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  width: 100%;
 }
 
 .card__footer__container > img {
-  width: 5em;
+  width: 10em;
 }
 
 /* contact classes

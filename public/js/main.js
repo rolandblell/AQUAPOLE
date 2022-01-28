@@ -65,3 +65,57 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 })
 
+// Requires the polyfill unitl fully supported
+import dialogPolyfill from "https://cdn.skypack.dev/dialog-polyfill@0.5.6";
+
+// Custom open and close handeler
+// This also has an close via backdrop option
+// TODO Replace with the Fylgja Plugin `@fylgja/dialog-js` (name may change 😅)
+function newDialog(id, button, backdrop = true) {
+    const dialog = document.querySelector(id);
+    const btn = document.querySelector(button);
+
+    if (!dialog) return;
+    if (!btn) return;
+
+    if (typeof HTMLDialogElement !== "function") {
+        dialogPolyfill.registerDialog(dialog);
+    }
+
+    const dialogClose = (target, e, dialog) => {
+        if (!e.target.closest(target)) return;
+        dialog.close();
+    };
+
+    const dialogCloseOnBackdrop = (e, dialog) => {
+        const rect = dialog.getBoundingClientRect();
+        const isInDialog =
+            rect.top <= e.clientY &&
+            e.clientY <= rect.top + rect.height &&
+            rect.left <= e.clientX &&
+            e.clientX <= rect.left + rect.width;
+
+        if (!isInDialog) {
+            dialog.close();
+        }
+    };
+
+    btn.addEventListener("click", () => {
+        if (backdrop) {
+            dialog.showModal();
+        } else {
+            dialog.show();
+        }
+    });
+
+    dialog.addEventListener("click", (e) => {
+        dialogClose(".close", e, dialog);
+        dialogCloseOnBackdrop(e, dialog);
+    });
+}
+
+newDialog("#dialog-modal-gutter-cleaning", "#show-dialog-modal-gutter-cleaning");
+newDialog("#dialog-modal-residential", "#show-dialog-modal-residential");
+newDialog("#dialog-modal-commercial", "#show-dialog-modal-commercial");
+newDialog("#dialog-modal-hot-water", "#show-dialog-modal-hot-water");
+newDialog("#dialog-modal-insurance", "#show-dialog-modal-insurance");
