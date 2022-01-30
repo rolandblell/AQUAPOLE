@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
 
 :root {
   --background-color: hsl(0, 0%, 93%);
-  --text-color: hsl(198, 89%, 7%);
+  --text-color: hsl(0deg 0% 40%);
+  --black-color: hsl(0deg 0% 0%);
   --accent: hsl(39, 99%, 61%);
   --accent-bg: hsl(196, 33%, 87%);
   --focus: hsl(216, 94%, 58%);
-  --font: 1.2rem/1.53 "IBM Plex Sans", "sans-serif", serif;
+  --font: 1.2rem/1.53 "Proxima Nova", sans-serif;
   --transition: 0.2s all ease;
   box-sizing: border-box;
 }
@@ -25,6 +26,7 @@ html {
 body:not(.aquapole__logo) {
   margin: 0;
   font: var(--font);
+  font-weight: 600;
   font-feature-settings: "case", "calt", "tnum", "ss01", "zero";
   text-rendering: optimizeLegibility;
   background-color: var(--background-color);
@@ -44,6 +46,38 @@ body:not(.aquapole__logo) {
 :focus {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
+}
+
+/** link
+   * Based on LoVe/HAte css specificity rule
+   */
+
+a:link {
+  color: var(--black-color);
+  word-break: break-word;
+}
+
+a:visited {
+  color: var(--black-color);
+  /* TODO: change color */
+}
+
+a:hover {
+  color: var(--black-color);
+  /* TODO: change color */
+}
+
+a:active {
+  color: var(--black-color);
+  /* TODO: change color */
+}
+
+.grey-text {
+  color: var(--text-color);
+}
+
+.black-text {
+  color: var(--black-color);
 }
 
 img {
@@ -106,32 +140,8 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.858rem;
   margin: 0;
-}
-
-/** link
-   * Based on LoVe/HAte css specificity rule
-   */
-
-a:link {
-  color: var(--text-color);
-  word-break: break-word;
-}
-
-a:visited {
-  color: var(--text-color);
-  /* TODO: change color */
-}
-
-a:hover {
-  color: var(--text-color);
-  /* TODO: change color */
-}
-
-a:active {
-  color: var(--text-color);
-  /* TODO: change color */
 }
 
 /* utility classes
@@ -192,24 +202,36 @@ a:active {
 .aquapole__container {
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .aquapole__logo {
   width: 8em;
+  height: 10em;
 }
 
 .aquapole__name__container {
-  padding-left: 2.5em;
+  padding: 2.5em;
+}
+
+.aquapole__name {
+  color: var(--black-color);
+  line-height: 1em;
 }
 
 .aquapole__slogan {
-  font-weight: 100;
+  font-weight: 300;
+  line-height: 1em;
 }
 
 /* services */
 
-main section svg:not(.fa-plus, .fa-heat) {
+main section svg:not(.fa-plus, .fa-heat, .fa-building) {
   width: 100px;
+}
+
+main section svg.fa-building {
+  width: 78px;
 }
 
 main section svg:is(.fa-plus, .fa-heat) {
@@ -245,13 +267,14 @@ main .wrapper:last-child {
   line-height: 2.4rem;
   font-weight: normal;
   padding-bottom: 1em;
+  font: var(--font);
 }
 
 .cards {
   grid-gap: 1em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding: 3em 0;
+  padding: 5em 0;
 }
 
 .card__footer__container {
@@ -264,11 +287,28 @@ main .wrapper:last-child {
 .card__footer__container>img {
   width: 10em;
   height: 7em;
+  filter: brightness(0.6420);
 }
 
 dialog {
   border: initial;
   border-radius: 12px;
+  max-width: inherit;
+  color: var(--text-color);
+}
+
+dialog::backdrop {
+  background: hsl(0deg 0% 0% / 73%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+dialog h1 {
+  color: var(--black-color);
+  font-weight: 400;
 }
 
 button.close {
@@ -296,6 +336,9 @@ button.close {
 
 /* contact classes
      ========================================================================== */
+.contact__heading {
+  color: var(--black-color);
+}
 
 .wrapper {
   max-width: 80rem;
@@ -303,8 +346,8 @@ button.close {
   margin-right: auto;
 }
 
-.headline {
-  text-align: center;
+.wrapper.headline {
+  padding: 0.75em;
 }
 
 .padding__inner {
@@ -315,6 +358,11 @@ button.close {
 
 .padding__inner.headline {
   padding: 0.75em;
+}
+
+.headline {
+  text-align: start;
+  max-width: 33em;
 }
 
 .padding__inner.hero {
@@ -351,29 +399,37 @@ button.close {
   pointer-events: none;
 }
 
-/* desktop styles
+/* desktop/tablet styles
      ========================================================================== */
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 666px) {
   :root {
-    --font: 1.6rem/1.63 "IBM Plex Sans", "sans-serif", serif;
+    --font: 1.6rem/1.63 "Proxima Nova", sans-serif;
   }
 
   h1 {
-    font-size: 2.45rem;
+    font-size: 2.585rem;
+  }
+
+  .aquapole__container {
+    flex-direction: row;
   }
 
   .aquapole__name {
-    font-size: 3.25rem;
+    font-size: 3.2rem;
   }
 
   .intro__description {
     margin: 4em 0;
-    text-align: center;
+    text-align: start;
   }
 
   .wrapper {
     margin: 0 auto;
+  }
+
+  .wrapper.headline {
+    padding: unset;
   }
 
   .padding__inner {
@@ -382,11 +438,21 @@ button.close {
 
   footer .padding__inner {
     padding: 4em 1.75em;
+    max-width: calc(32em + 3.25em);
   }
 
   .wrapper {
     margin: 0 auto;
   }
+
+  main section.services {
+    padding-top: 5em;
+  }
+
+  dialog {
+    max-width: calc((100% - 50vw) - 2em);
+  }
+
 }
 
 /* parallax
