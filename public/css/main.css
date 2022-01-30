@@ -31,8 +31,6 @@ body:not(.aquapole__logo) {
   text-rendering: optimizeLegibility;
   background-color: var(--background-color);
   color: var(--text-color);
-  opacity: 0.1;
-  animation: fade 1s ease-in forwards 0.3s;
   scrollbar-color: var(--thumbBG);
   line-height: 1.6;
   letter-spacing: 0.01em;
@@ -195,6 +193,46 @@ h1 {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+/* components
+     ========================================================================== */
+#navbar {
+  background-color: hsl(0deg 0% 0% / 73%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  position: fixed;
+  top: -70px;
+  width: 100%;
+  display: flex;
+  transition: top 0.3s;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+#navbar .navbar__container {
+  display: flex;
+  width: 100vw;
+  justify-content: inherit;
+  max-width: calc(100vw - 3.5em);
+}
+
+#navbar a {
+  display: flex;
+  color: var(--accent-bg);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.dial__icon > span{
+  font-size: 0;
+  width: 2em;
+}
+
+.dial__icon .fa-phone-square-alt {
+  width: 1.35em;
+  height: 1.35em;
 }
 
 /* homepage classes
@@ -362,6 +400,8 @@ button.close {
 .headline {
   text-align: start;
   max-width: 33em;
+  opacity: 0.1;
+  animation: fade 1s ease-in forwards 0.3s;
 }
 
 .padding__inner.hero {
