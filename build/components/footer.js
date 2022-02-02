@@ -8,7 +8,29 @@ class Footer extends HTMLElement {
         <footer id="contact" class="accent__bg">
           <div class="padding__inner wrapper">
             <h2 class="contact__heading">Let's Get in Touch</h2>
-            <div>
+              <form
+                name="contact"
+                method="POST"
+                data-netlify-recaptcha="true"
+                data-netlify="true"
+              >
+                <p class="grid-container">
+                  <label class="form__name">
+                    <span>Name</span><input type="text" name="name" />
+                  </label>
+                  <label class="form__email">
+                    <span>Email</span><input type="text" name="email" />
+                  </label>
+                  <label class="form__message">
+                    <span>Message</span><textarea name="message"></textarea>
+                  </label>
+                </p>
+                <div data-netlify-recaptcha="true"></div>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+
               <p>If you’d like to find out how AQUAPOLE Cleaning Services can meet your needs then feel
               free to email us <a class="black-text" href="mailto:admin@aquapole.net">admin@aquapole.net</a>
               or call us on this number <a class="black-text" href="tel:+4407366366376">07 366 366 376</a>.</p>
