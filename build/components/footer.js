@@ -8,6 +8,7 @@ class Footer extends HTMLElement {
         <footer id="contact" class="accent__bg">
           <div class="padding__inner wrapper">
             <h2 class="contact__heading">Let's Get in Touch</h2>
+              <p>To ensure a Simply Spotless environment contact us online using the form below</p>
               <form
                 name="contact"
                 method="POST"
@@ -16,24 +17,24 @@ class Footer extends HTMLElement {
               >
                 <p class="grid-container">
                   <label class="form__name">
-                    <span>Name</span><input type="text" name="name" />
+                    <span>Name</span><input type="text" name="name" placeholder='Your Name'/>
                   </label>
                   <label class="form__email">
-                    <span>Email</span><input type="text" name="email" />
+                    <span>Email</span><input type="text" name="email" placeholder='Your Email'/>
                   </label>
                   <label class="form__message">
-                    <span>Message</span><textarea name="message"></textarea>
+                    <span>Message</span><textarea name="message" placeholder='Your Message'></textarea>
                   </label>
                 </p>
                 <div data-netlify-recaptcha="true"></div>
-                <p>
-                  <button type="submit">Send</button>
+                <p class="form__submit__btn__container">
+                  <button class="form__submit__btn" type="submit">Send</button>
                 </p>
               </form>
 
-              <p>If you’d like to find out how AQUAPOLE Cleaning Services can meet your needs then feel
-              free to email us <a class="black-text" href="mailto:admin@aquapole.net">admin@aquapole.net</a>
-              or call us on this number <a class="black-text" href="tel:+4407366366376">07 366 366 376</a>.</p>
+              <p>Email us <a class="black-text" href="mailto:info@aquapole.net">info@aquapole.net</a>
+              <br>
+              Or call us on <a class="black-text" href="tel:+4407366366376">07 366 366 376</a>.</p>
               <div class="contact__social">
                 <a class="instagram__icon" rel="noopener" href="https://www.instagram.com/aquapolecleaningservices/" target="_blank">
                 Instagram<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
