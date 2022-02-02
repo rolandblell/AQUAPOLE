@@ -26,6 +26,7 @@ html {
 body:not(.aquapole__logo) {
   margin: 0;
   font: var(--font);
+  font-display: swap;
   font-weight: 600;
   font-feature-settings: "case", "calt", "tnum", "ss01", "zero";
   text-rendering: optimizeLegibility;
@@ -217,22 +218,25 @@ h1 {
   max-width: calc(80rem + 2rem);
 }
 
-#navbar a {
+#navbar .navbar__container>* {
   display: flex;
   color: var(--accent-bg);
   text-align: center;
   padding: 15px;
   text-decoration: none;
+  background: initial;
+  border: initial;
+  align-items: center;
 }
 
-.dial__icon > span{
+.dial__icon>span {
   font-size: 0;
   width: 2em;
 }
 
 .dial__icon .fa-phone-square-alt {
-  width: 1.35em;
-  height: 1.35em;
+  width: 2.35em;
+  height: 2.35em;
 }
 
 /* homepage classes
@@ -326,7 +330,7 @@ main .wrapper:last-child {
 .card__footer__container>img {
   width: 10em;
   height: 7em;
-  filter: brightness(0.6420);
+  filter: brightness(0.8420);
 }
 
 dialog {
@@ -440,6 +444,41 @@ button.close {
   background-size: cover;
   background: url(../images/emoji-trail.png) no-repeat;
   pointer-events: none;
+}
+
+form p {
+  margin: 0;
+}
+
+:is(form label input, form label textarea) {
+  border: 1px solid hsl(0deg 0% 80%);
+  border-radius: 12px;
+  min-height: 38px;
+}
+
+.form__name {
+  grid-area: name;
+}
+
+.form__email {
+  grid-area: email;
+}
+
+.form__message {
+  grid-area: message;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'name name name email email email'
+    'message message message message message message';
+  grid-gap: 10px;
+}
+
+.grid-container>label {
+  display: flex;
+  flex-direction: column;
 }
 
 /* desktop/tablet styles
