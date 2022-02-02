@@ -44,7 +44,6 @@ body:not(.aquapole__logo) {
 
 :focus {
   outline: 2px solid var(--focus);
-  outline-offset: 2px;
 }
 
 /** link
@@ -453,7 +452,21 @@ form p {
 :is(form label input, form label textarea) {
   border: 1px solid hsl(0deg 0% 80%);
   border-radius: 12px;
-  min-height: 38px;
+  min-height: 48px;
+  padding: 0 0.8em;
+  font: var(--font);
+  font-size: 1rem;
+}
+
+form label textarea {
+  padding: 0.4em 0.8em;
+  font: var(--font);
+  font-size: 1rem;
+}
+
+form label span {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 .form__name {
@@ -471,15 +484,41 @@ form p {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'name name name email email email'
+    'name name name name name name'
+    'email email email email email email'
     'message message message message message message';
-  grid-gap: 10px;
+  grid-gap: 1em;
 }
 
 .grid-container>label {
   display: flex;
   flex-direction: column;
 }
+
+.form__submit__btn__container {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.form__submit__btn {
+  background-image: -o-linear-gradient(45deg, var(--focus), var(--accent), var(--focus));
+  background-image: linear-gradient(45deg, var(--focus), var(--accent), var(--focus));
+  padding: 1em 2em;
+  border: none;
+  font-size: 1rem;
+  color: var(--accent-bg);
+  background-size: 320% 100%;
+  border-radius: 12px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-position 0.75s ease;
+}
+
+.form__submit__btn:hover {
+  background-position: 100% 0;
+  transition: background-position 0.5s ease;
+}
+
 
 /* desktop/tablet styles
      ========================================================================== */
@@ -519,7 +558,7 @@ form p {
   }
 
   footer .padding__inner {
-    padding: 4em 1.75em;
+    padding: 4em 1em;
     max-width: calc(32em + 3.25em);
   }
 
@@ -535,6 +574,11 @@ form p {
     max-width: calc((100% - 50vw) - 2em);
   }
 
+  .grid-container {
+    grid-template-areas:
+      'name name name email email email'
+      'message message message message message message';
+  }
 }
 
 /* parallax
