@@ -382,6 +382,7 @@ button.close {
      ========================================================================== */
 .contact__heading {
   color: var(--black-color);
+  margin: 0;
 }
 
 .wrapper {
@@ -558,7 +559,7 @@ form label span {
   }
 
   footer .padding__inner {
-    padding: 4em 1em;
+    padding: 2em 1em;
     max-width: calc(32em + 3.25em);
   }
 

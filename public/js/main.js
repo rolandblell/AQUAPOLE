@@ -70,7 +70,7 @@ import dialogPolyfill from "https://cdn.skypack.dev/dialog-polyfill@0.5.6";
 
 // Custom open and close handeler
 // This also has an close via backdrop option
-// TODO Replace with the Fylgja Plugin `@fylgja/dialog-js` (name may change 😅)
+// TODO Replace with the Fylgja Plugin `@fylgja/dialog-js`
 function newDialog(id, button, backdrop = true) {
     const dialog = document.querySelector(id);
     const btn = document.querySelector(button);
