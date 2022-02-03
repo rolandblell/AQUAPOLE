@@ -6,7 +6,7 @@ class Footer extends HTMLElement {
     this.innerHTML = `
         <footer id="contact" class="accent__bg">
           <div class="padding__inner wrapper">
-            <h2 class="contact__heading">Let's Get in Touch</h2>
+            <h2 class="contact__heading">Let's Get in Touch ✨</h2>
               <p>To ensure a Simply Spotless environment contact us</p>
               <form
                 name="contact"
