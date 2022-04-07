@@ -228,6 +228,10 @@ h1 {
   align-items: center;
 }
 
+#navbar .navbar__container svg {
+  font-size: 1rem;
+}
+
 .dial__icon>span {
   font-size: 0;
   width: 2em;
@@ -508,7 +512,7 @@ form label span {
   border: none;
   font-size: 1rem;
   color: var(--accent-bg);
-  background-size: 345% 100%;
+  background-size: 555% 100%;
   border-radius: 12px;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
   cursor: pointer;

@@ -7,7 +7,7 @@ class Footer extends HTMLElement {
         <footer id="contact" class="accent__bg">
           <div class="padding__inner wrapper">
             <h2 class="contact__heading">Let's Get in Touch ✨</h2>
-              <p>To ensure a Simply Spotless environment contact us</p>
+              <p>To ensure a <span class="black-text">Simply Spotless</span> environment contact us</p>
               <form
                 name="contact"
                 method="POST"
