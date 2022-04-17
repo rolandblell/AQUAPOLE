@@ -119,3 +119,4 @@ newDialog("#dialog-modal-residential", "#show-dialog-modal-residential");
 newDialog("#dialog-modal-commercial", "#show-dialog-modal-commercial");
 newDialog("#dialog-modal-hot-water", "#show-dialog-modal-hot-water");
 newDialog("#dialog-modal-insurance", "#show-dialog-modal-insurance");
+newDialog("#dialog-modal-environment", "#show-dialog-modal-environment");
